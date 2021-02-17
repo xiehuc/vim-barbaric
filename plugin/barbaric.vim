@@ -24,7 +24,7 @@ if executable('xkbswitch')
     autocmd InsertLeave * call barbaric#switch('normal')
     autocmd FocusLost   * call barbaric#switch('insert')
     autocmd FocusGained * call barbaric#switch('normal')
-    autocmd VimLeave    * call barbaric#switch('insert')
-    autocmd VimEnter    * call barbaric#switch('normal')
+    autocmd VimLeave    * call barbaric#switch('normal') " 退出时还原
+    autocmd VimEnter    * call barbaric#switch('normal') " 启动时重置
   augroup END
 endif
